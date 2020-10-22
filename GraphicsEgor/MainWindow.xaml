@@ -1,0 +1,25 @@
+﻿<Window x:Class="GraphicsEgor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraphicsEgor"
+        xmlns:charts="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <ComboBox Name="cmbChartTypes" SelectionChanged="cmbChartTypes_SelectionChanged"/>
+        <WindowsFormsHost Margin="0,0,0.333,-0.333" Grid.Row="2">
+            <charts:Chart x:Name="chartPayment">
+                <charts:Chart.Legends>
+                    <charts:Legend>
+                    </charts:Legend>
+                </charts:Chart.Legends>
+            </charts:Chart>
+        </WindowsFormsHost>
+    </Grid>
+</Window>
